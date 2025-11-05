@@ -3,7 +3,7 @@ import axios from 'axios';
 export default async function handler(req, res) {
   if (req.method === 'GET') {
     try {
-      const backendRes = await axios.get(`${process.env.BACKEND_URL}/api/posts`, {
+      const backendRes = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/posts`, {
         headers: {
           Authorization: req.headers.authorization || '',
         },
