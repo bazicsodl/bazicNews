@@ -14,7 +14,8 @@ const app = express();
 app.use(cors({
   origin: [
     'https://bazic-news.vercel.app', 
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://localhost:8081'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
