@@ -23,7 +23,7 @@ export default function RegisterForm() {
 
     try {
       // Step 1: Register the user
-      const registerRes = await fetch('http://localhost:2500/api/auth/register', {
+      const registerRes = await fetch('https://bazicnews.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -37,7 +37,7 @@ export default function RegisterForm() {
 
       // Step 2: Auto-login after successful registration
       // Auto-login with email, not username
-const loginRes = await fetch('http://localhost:2500/api/auth/login', {
+const loginRes = await fetch('https://bazicnews.onrender.com/api/auth/login', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({

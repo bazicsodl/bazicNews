@@ -32,7 +32,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:2500/api/posts?limit=100');
+        const response = await fetch('https://bazicnews.onrender.com/api/posts?limit=100');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         if (!data.posts) throw new Error('Invalid response format - missing posts array');
@@ -204,7 +204,10 @@ export default function Home() {
     <>
       <Head>
         <title>FinancePulse - News Feed</title>
-        <Script 
+
+      </Head>
+
+      <Script 
           src="https://s3.tradingview.com/tv.js" 
           strategy="afterInteractive"
           onLoad={() => {
@@ -212,8 +215,7 @@ export default function Home() {
             if (window.TradingView) initializeCharts();
           }}
         />
-      </Head>
-
+        
       <Navbar categories={allCategories} onSelectCategory={setSelectedCategory} />
   
       <main className="p-6 max-w-6xl mx-auto">

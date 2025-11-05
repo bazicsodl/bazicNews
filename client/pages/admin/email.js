@@ -7,7 +7,7 @@ export default function PromotionEmail() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:2500/api/send-promo', {
+    const res = await fetch('https://bazicnews.onrender.com/api/send-promo', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ subject, body }),

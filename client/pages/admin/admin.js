@@ -34,7 +34,7 @@ export default function AdminDashboard({ stats }) {
 
 // Optional: Fetch stats from API
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:2500/api/admin/stats');
+  const res = await fetch('https://bazicnews.onrender.com/api/admin/stats');
   const data = await res.json();
 
   return {

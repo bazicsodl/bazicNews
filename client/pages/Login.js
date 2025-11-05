@@ -16,7 +16,7 @@ const handleLogin = async (e) => {
     // Show loading state (optional)
     setLoading(true);
 
-    const response = await fetch('http://localhost:2500/api/auth/login', {
+    const response = await fetch('https://bazicnews.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',

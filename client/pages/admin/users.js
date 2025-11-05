@@ -5,14 +5,14 @@ export default function ManageUsers() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:2500/api/users')
+    fetch('https://bazicnews.onrender.com/api/users')
       .then(res => res.json())
       .then(setUsers)
       .catch(console.error);
   }, []);
 
   const deleteUser = async (id) => {
-    await fetch(`http://localhost:2500/api/users/${id}`, { method: 'DELETE' });
+    await fetch(`https://bazicnews.onrender.com/api/users/${id}`, { method: 'DELETE' });
     setUsers(users.filter(u => u._id !== id));
   };
 

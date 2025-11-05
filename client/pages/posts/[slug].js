@@ -11,7 +11,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     if (slug) {
-      fetch(`http://localhost:2500/api/posts/${slug}`)
+      fetch(`https://bazicnews.onrender.com/api/posts/${slug}`)
         .then((res) => res.json())
         .then((data) => setPost(data))
         .catch((err) => console.error('Error fetching post:', err));

@@ -28,7 +28,7 @@ export default function ManagePosts() {
   const fetchPosts = async () => {
     try {
       const response = await fetch(
-        `http://localhost:2500/api/posts?page=${pagination.currentPage}&limit=${pagination.limit}`
+        `https://bazicnews.onrender.com/api/posts?page=${pagination.currentPage}&limit=${pagination.limit}`
       );
       const data = await response.json();
       
@@ -54,7 +54,7 @@ export default function ManagePosts() {
   };
 
  const handleDelete = async (id) => {
-    await fetch(`http://localhost:2500/api/posts/${id}`, {
+    await fetch(`https://bazicnews.onrender.com/api/posts/${id}`, {
       method: 'DELETE',
     });
     setPosts(posts.filter(p => p._id !== id));
@@ -92,7 +92,7 @@ export default function ManagePosts() {
   try {
     if (editingPost) {
       // PUT request (update)
-      await fetch(`http://localhost:2500/api/posts/${editingPost}`, {
+      await fetch(`https://bazicnews.onrender.com/api/posts/${editingPost}`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export default function ManagePosts() {
       setEditingPost(null);
     } else {
       // POST request (create)
-      await fetch('http://localhost:2500/api/posts', {
+      await fetch('https://bazicnews.onrender.com/api/posts', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
