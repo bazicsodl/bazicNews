@@ -249,7 +249,7 @@ export default function Home() {
                           </span>
                         </div>
                         <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">
-                          {match.fixture.status.short} {match.fixture.status.elapsed}' 
+                           {match.fixture.status.short} {match.fixture.status.elapsed}&apos;
                         </span>
                       </div>
                       
